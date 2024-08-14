@@ -1,33 +1,65 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+.home-content btn-box{
+  display: flex;
+  justify-content: space-between;
+  width: 360px;
+  height: 50px;
+
 }
 
-h1 {
-    color: #333;
+.btn-box a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  align-items: center;
+  height:80%;
+  background: blue;
+  border: 4px solid blue;
+  border-radius: 8px;
+  font-size:30px;
+  color: white;
+  text-decoration:none;
+  font-weight:600;
+  letter-spacing:1px;
 }
 
-.courses {
-    display: inline-block;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+
+.btn-box a:hover{
+  background: transparent;
+  color: black;
+  
+  
 }
 
-.course {
-    background-color: #f8f8f8;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+.btn-box a:nth-child(2){
+  background: transparent;
+  color:blue;
+  
 }
 
-.course:hover {
-    background-color: #e0e0e0;
+
+
+
+
+
+
+
+.btn-box a::before{
+  content: '';
+  position: absolute;
+  top:0;
+  left:0;
+  width: 0;
+  height: 100%;
+  background: yellowgreen ;
+  z-index: -1;
+  transition: .5s;
+  overflow: hidden;
+}
+
+.btn-box a:hover::before{
+  width: 100%;
 }
